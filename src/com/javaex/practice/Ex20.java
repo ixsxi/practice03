@@ -5,63 +5,44 @@ import java.util.Scanner;
 public class Ex20 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		int ran = (int)(Math.random()*100)+1;
-		String end;
+		System.out.println("======================");
+		System.out.println("[숫자 맞추기 게임 시작");
+		System.out.println("======================");
+		
 		Scanner sc =new Scanner(System.in);
+		int ran = (int)(Math.random()*100)+1;
 		
-		System.out.println("=========================");
-		System.out.println("[숫자 맞추기 게임 시작]");
-		System.out.println("=========================");
-		System.out.print(">>");
-		
-		
-		int num =sc.nextInt();
-		 end =sc.nextLine();
-		
-		
-		while (true) {
+		while(true) {
+			System.out.print(">>");
+			int num =sc.nextInt();
 			
 			
-			if(ran>num) {
-			
-				System.out.println("더 높게");
-				System.out.print(">>");
-				num =sc.nextInt();
-				
-				
-			}if(ran<num) {
-				
-				System.out.println("더 낮게");
-				System.out.print(">>");
-				num =sc.nextInt();
-				
-			}else if(ran == num) {
+			if(ran == num) {
 				System.out.println("맞았습니다");
-				System.out.println("게임을 종료하시겠습니까?(y/n) >>");
-				sc.next().equals("y");
+				System.out.print("게임을 종료하시겠습니까?(Y/N >>");
+				 String anwer=sc.next();
+				 
+			 if(anwer.equals("Y")) {
+				System.out.println("======================");
+				System.out.println("[숫자 맞추기 게임 종료");
+				System.out.println("======================");
 				break;
+				
+			}else if (anwer.equals("N")) {
+				System.out.println("다시시작");
+				 ran = (int)(Math.random()*100)+1;
+			
 			}
-			
-			
+				
 		}
-		System.out.println("=========================");
-		System.out.println("숫자맞추기 게임 종료");
-		System.out.println("=========================");
+			if(num>ran) {
+				System.out.println("더 낮게");
+			}
+			else if(num<ran) {
+				System.out.println("더 높게");
+			}
 
-		
-		/*
-		 end =sc.nextLine();
-		 
-		 if(sc.next().equals("y")) {
-			 
-			System.out.println("=========================");
-			System.out.println("숫자맞추기 게임 종료");
-			System.out.println("=========================");
-			
-		 }*/
-		
 	}
 
+}
 }
