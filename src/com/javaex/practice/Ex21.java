@@ -16,14 +16,20 @@ public class Ex21 {
 		while(true) {
 			System.out.print(">>");
 			int num =sc.nextInt();
-			
+		
 			if(ran>num) {
 				System.out.println(" 더 높게");
-			    
+				
+				if(ran-num <=5 ) {
+					System.out.println(" 근접");
+				}
+				
 			
 		}else if(ran<num) {
 			System.out.println("더 낮게");
-			
+			if(ran-num >=-5 ) {
+				System.out.println(" 근접");
+			}
 		}else {
 			System.out.println("맞았습니다.");
 			System.out.println("게임을 종료하시겠습니까?(y/n) >>");
