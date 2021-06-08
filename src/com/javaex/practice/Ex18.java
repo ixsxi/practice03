@@ -15,18 +15,18 @@ public class Ex18 {
 		
 		
 		
-		for(int i =0; i<num; i++) {
+		for(int i =0; i<num; i++) { // 
 			for(int j=0; j<num-i; j++) {
 				System.out.print("*");
 			}System.out.println("");
 		}
 		
-		
+		/*
 		for(int i =2; i<=num; i++) {
 			for(int k=0; k<i; k++) {
 				System.out.print("*");
 			}System.out.println("");
-		}
+		}*/
 		
 		
 		
